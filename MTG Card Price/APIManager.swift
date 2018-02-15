@@ -9,11 +9,13 @@
 import Foundation
 
 class RDQAPIManager {
-    static func searchFor(cardWith name: String) {
+    static func searchFor(cardWith name: String, completion: @escaping (String?) -> ()) {
         
         let apiString = "https://shop.tcgplayer.com/magic/product/show?newSearch=true&ProductName="
-        
-        if let url = URL.init(string: apiString + name) {
+        let validatedName = name.replacingOccurrences(of: " ", with: "%20")
+
+        if let url = URL.init(string: apiString + validatedName) {
+            
             let config = URLSessionConfiguration.default
             let session = URLSession.init(configuration: config)
             let _ = session.dataTask(with: url, completionHandler: { data, response, error in
@@ -23,9 +25,14 @@ class RDQAPIManager {
                 
                 if let data = data,
                     let string = String.init(data: data, encoding: .utf8) {
-                    print("String: \(string)")
+                    
+                    if let parsedString = RDQParser.parse(html: string) {
+                        completion(parsedString)
+                        return
+                    }
                 }
                 
+                completion(nil)
             }).resume()
             
         }

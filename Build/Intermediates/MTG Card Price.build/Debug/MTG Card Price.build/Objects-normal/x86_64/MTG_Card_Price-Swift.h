@@ -196,6 +196,7 @@ SWIFT_CLASS("_TtC14MTG_Card_Price11AppDelegate")
 
 @class NSSearchField;
 @class NSTextField;
+@class NSProgressIndicator;
 @class NSBundle;
 @class NSCoder;
 
@@ -203,6 +204,7 @@ SWIFT_CLASS("_TtC14MTG_Card_Price14ViewController")
 @interface ViewController : NSViewController
 @property (nonatomic, weak) IBOutlet NSSearchField * _Null_unspecified searchField;
 @property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified priceLabel;
+@property (nonatomic, weak) IBOutlet NSProgressIndicator * _Null_unspecified activityIndicator;
 - (void)viewDidLoad;
 @property (nonatomic) id _Nullable representedObject;
 - (IBAction)searchAction:(id _Nonnull)sender;

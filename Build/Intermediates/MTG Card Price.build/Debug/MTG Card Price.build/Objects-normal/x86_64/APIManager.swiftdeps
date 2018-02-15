@@ -9,69 +9,100 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "+"
 - "RDQAPIManager"
+- !private "RDQParser"
 - "String"
 - !private "StringLiteralType"
 - !private "URL"
 - !private "URLSession"
 - !private "URLSessionConfiguration"
+- !private "UnicodeScalarType"
 - !private "print"
 depends-member:
 - !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "replacingOccurrences"]
 - !private ["s7CVarArgP", "dataTask"]
 - !private ["s7CVarArgP", "default"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "replacingOccurrences"]
 - !private ["s7CVarArgP", "resume"]
 - !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "replacingOccurrences"]
 - !private ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "replacingOccurrences"]
 - !private ["s28CustomDebugStringConvertibleP", "dataTask"]
 - !private ["s28CustomDebugStringConvertibleP", "default"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "replacingOccurrences"]
 - !private ["s28CustomDebugStringConvertibleP", "resume"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "replacingOccurrences"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "replacingOccurrences"]
 - !private ["s23CustomStringConvertibleP", "dataTask"]
 - !private ["s23CustomStringConvertibleP", "default"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "replacingOccurrences"]
 - !private ["s23CustomStringConvertibleP", "resume"]
 - !private ["s23CustomStringConvertibleP", "utf8"]
 - !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "replacingOccurrences"]
 - !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "replacingOccurrences"]
 - !private ["SS10FoundationE8EncodingV", "utf8"]
 - !private ["s9EquatableP", "dataTask"]
 - !private ["s9EquatableP", "default"]
 - !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "replacingOccurrences"]
 - !private ["s9EquatableP", "resume"]
 - !private ["s9EquatableP", "utf8"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "replacingOccurrences"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "replacingOccurrences"]
 - !private ["s8HashableP", "dataTask"]
 - !private ["s8HashableP", "default"]
 - !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "replacingOccurrences"]
 - !private ["s8HashableP", "resume"]
 - !private ["s8HashableP", "utf8"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "replacingOccurrences"]
 - !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "replacingOccurrences"]
 - !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "replacingOccurrences"]
 - !private ["So9NSCopyingP", "default"]
 - !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "replacingOccurrences"]
 - !private ["So9NSCopyingP", "resume"]
 - !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "replacingOccurrences"]
 - !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "replacingOccurrences"]
 - !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "replacingOccurrences"]
 - !private ["So8NSObjectC", "dataTask"]
 - !private ["So8NSObjectC", "default"]
 - !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "replacingOccurrences"]
 - !private ["So8NSObjectC", "resume"]
 - !private ["So16NSObjectProtocolP", "dataTask"]
 - !private ["So16NSObjectProtocolP", "default"]
 - !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "replacingOccurrences"]
 - !private ["So16NSObjectProtocolP", "resume"]
 - !private ["So19NSPasteboardReadingP", "init"]
+- !private ["So19NSPasteboardReadingP", "replacingOccurrences"]
 - !private ["So19NSPasteboardWritingP", "init"]
+- !private ["So19NSPasteboardWritingP", "replacingOccurrences"]
 - !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "replacingOccurrences"]
 - !private ["So8NSStringC", "init"]
+- !private ["So8NSStringC", "replacingOccurrences"]
 - !private ["So17ProgressReportingP", "resume"]
+- !private ["14MTG_Card_Price13RDQAPIManagerC", "RDQParser"]
 - ["14MTG_Card_Price13RDQAPIManagerC", "String"]
 - !private ["14MTG_Card_Price13RDQAPIManagerC", "URL"]
 - !private ["14MTG_Card_Price13RDQAPIManagerC", "URLSession"]
@@ -80,14 +111,21 @@ depends-member:
 - ["14MTG_Card_Price13RDQAPIManagerC", "init"]
 - !private ["14MTG_Card_Price13RDQAPIManagerC", "print"]
 - ["14MTG_Card_Price13RDQAPIManagerC", "searchFor"]
+- !private ["14MTG_Card_Price9RDQParserC", "parse"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "replacingOccurrences"]
 - !private ["s16RawRepresentableP", "utf8"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "replacingOccurrences"]
 - !private ["SS", "init"]
+- !private ["SS", "replacingOccurrences"]
 - !private ["s14StringProtocolP", "init"]
+- !private ["s14StringProtocolP", "replacingOccurrences"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "replacingOccurrences"]
 - !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "replacingOccurrences"]
 - !private ["10Foundation3URLV", "init"]
 - !private ["So10URLSessionC", "dataTask"]
 - !private ["So10URLSessionC", "init"]
@@ -95,22 +133,35 @@ depends-member:
 - !private ["So18URLSessionDataTaskC", "resume"]
 - !private ["So14URLSessionTaskC", "resume"]
 - !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "replacingOccurrences"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "replacingOccurrences"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "replacingOccurrences"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "replacingOccurrences"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "replacingOccurrences"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "replacingOccurrences"]
 - !private ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "replacingOccurrences"]
 - !private ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "replacingOccurrences"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dataTask"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "replacingOccurrences"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "replacingOccurrences"]
 - !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "replacingOccurrences"]
 - !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "replacingOccurrences"]
 depends-nominal:
 - !private "s23BidirectionalCollectionP"
 - !private "s7CVarArgP"
@@ -143,6 +194,7 @@ depends-nominal:
 - !private "So8NSStringC"
 - !private "So17ProgressReportingP"
 - "14MTG_Card_Price13RDQAPIManagerC"
+- !private "14MTG_Card_Price9RDQParserC"
 - !private "s26RangeReplaceableCollectionP"
 - !private "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
@@ -173,6 +225,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Users/oleksandrrudavka/Developer/MTG Card Price/Build/Products/Debug/SwiftSoup/SwiftSoup.framework/Modules/SwiftSoup.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
@@ -188,15 +241,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/xpc/XPC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "0a1502b4c9bad86229f1f76a55d863d2"
+- "/Users/oleksandrrudavka/Developer/MTG Card Price/Build/Products/Debug/SwiftSoup/SwiftSoup.framework/Headers/SwiftSoup-umbrella.h"
+- "/Users/oleksandrrudavka/Developer/MTG Card Price/Build/Products/Debug/SwiftSoup/SwiftSoup.framework/Headers/SwiftSoup-Swift.h"
+- "/Users/oleksandrrudavka/Developer/MTG Card Price/Build/Products/Debug/SwiftSoup/SwiftSoup.framework/Modules/module.modulemap"
+interface-hash: "912b5e28ac46e36a297ef8f719d604aa"

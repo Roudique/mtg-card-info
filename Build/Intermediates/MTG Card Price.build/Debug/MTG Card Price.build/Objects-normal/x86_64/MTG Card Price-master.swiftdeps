@@ -1,7 +1,8 @@
 version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
-options: "270ca87b3c11f1013634bfbd6910b66f"
-build_time: [1518712068, 638122000]
+options: "3c1ab2ff6db3cd79875493971b164691"
+build_time: [1518715062, 400383000]
 inputs:
-  "/Users/oleksandrrudavka/Developer/MTG Card Price/MTG Card Price/APIManager.swift": [1518712068, 0]
-  "/Users/oleksandrrudavka/Developer/MTG Card Price/MTG Card Price/ViewController.swift": [1518711373, 0]
+  "/Users/oleksandrrudavka/Developer/MTG Card Price/MTG Card Price/Parser.swift": [1518714741, 0]
+  "/Users/oleksandrrudavka/Developer/MTG Card Price/MTG Card Price/APIManager.swift": [1518715062, 0]
+  "/Users/oleksandrrudavka/Developer/MTG Card Price/MTG Card Price/ViewController.swift": [1518714797, 0]
   "/Users/oleksandrrudavka/Developer/MTG Card Price/MTG Card Price/AppDelegate.swift": [1518710858, 0]
