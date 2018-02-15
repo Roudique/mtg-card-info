@@ -9,7 +9,9 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    @IBOutlet weak var searchField: NSSearchField!
+    @IBOutlet weak var priceLabel: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,11 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func searchAction(_ sender: Any) {
+        if searchField.stringValue.count > 0 {
+            RDQAPIManager.searchFor(cardWith: searchField.stringValue)
+        }
+    }
+    
 }
 

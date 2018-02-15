@@ -12,6 +12,7 @@
 		4AF046A72035E7CA0025513F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF046A62035E7CA0025513F /* Assets.xcassets */; };
 		4AF046AA2035E7CA0025513F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF046A82035E7CA0025513F /* Main.storyboard */; };
 		4AF046B62035E7CA0025513F /* MTG_Card_PriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF046B52035E7CA0025513F /* MTG_Card_PriceTests.swift */; };
+		4AF046C12035E8370025513F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF046C02035E8370025513F /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 		4AF046B12035E7CA0025513F /* MTG Card PriceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MTG Card PriceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF046B52035E7CA0025513F /* MTG_Card_PriceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTG_Card_PriceTests.swift; sourceTree = "<group>"; };
 		4AF046B72035E7CA0025513F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AF046C02035E8370025513F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		4AF046C22035EAF20025513F /* MTG Card Price.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MTG Card Price.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +79,14 @@
 		4AF046A12035E7CA0025513F /* MTG Card Price */ = {
 			isa = PBXGroup;
 			children = (
+				4AF046C22035EAF20025513F /* MTG Card Price.entitlements */,
 				4AF046A22035E7CA0025513F /* AppDelegate.swift */,
 				4AF046A42035E7CA0025513F /* ViewController.swift */,
 				4AF046A62035E7CA0025513F /* Assets.xcassets */,
 				4AF046A82035E7CA0025513F /* Main.storyboard */,
 				4AF046AB2035E7CA0025513F /* Info.plist */,
 				4AF046AC2035E7CA0025513F /* MTG_Card_Price.entitlements */,
+				4AF046C02035E8370025513F /* APIManager.swift */,
 			);
 			path = "MTG Card Price";
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AF046C12035E8370025513F /* APIManager.swift in Sources */,
 				4AF046A52035E7CA0025513F /* ViewController.swift in Sources */,
 				4AF046A32035E7CA0025513F /* AppDelegate.swift in Sources */,
 			);
@@ -342,7 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "MTG Card Price/MTG_Card_Price.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "MTG Card Price/MTG Card Price.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Y3RCB36D2R;
@@ -358,7 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "MTG Card Price/MTG_Card_Price.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "MTG Card Price/MTG Card Price.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Y3RCB36D2R;
