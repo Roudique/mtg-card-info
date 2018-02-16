@@ -9,10 +9,12 @@
 import Foundation
 
 class RDQAPIManager {
+    static let baseAPIURL = "https://api.scryfall.com/"
+    
     static func searchFor(cardWith name: String, completion: @escaping (String?) -> ()) {
         
-        let apiString = "https://shop.tcgplayer.com/magic/product/show?newSearch=true&ProductName="
-        let validatedName = name.replacingOccurrences(of: " ", with: "%20")
+        let apiString = baseAPIURL + "cards/named?fuzzy="
+        let validatedName = name.replacingOccurrences(of: " ", with: "+")
 
         if let url = URL.init(string: apiString + validatedName) {
             
@@ -23,16 +25,17 @@ class RDQAPIManager {
                 print("Response: \(response)")
                 print("DATA:\n\(data)\nEND DATA\n")
                 
-                if let data = data,
-                    let string = String.init(data: data, encoding: .utf8) {
-                    
-                    if let parsedString = RDQParser.parse(html: string) {
-                        completion(parsedString)
-                        return
+                if let data = data, let dataString = String.init(data: data, encoding: .utf8) {
+                    if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] {
+                        
+                        if let usd = json!["usd"] as? String {
+                            completion(usd)
+                            return
+                        }
                     }
                 }
                 
-                completion(nil)
+                completion("No data")
             }).resume()
             
         }
