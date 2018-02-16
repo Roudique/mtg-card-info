@@ -13,7 +13,7 @@ class RDQAPIManager {
     
     static func searchFor(cardWith name: String, completion: @escaping (String?) -> ()) {
         
-        let apiString = baseAPIURL + "cards/named?fuzzy="
+        let apiString = baseAPIURL + "cards/search?q="
         let validatedName = name.replacingOccurrences(of: " ", with: "+")
 
         if let url = URL.init(string: apiString + validatedName) {
@@ -26,12 +26,18 @@ class RDQAPIManager {
                 print("DATA:\n\(data)\nEND DATA\n")
                 
                 if let data = data, let dataString = String.init(data: data, encoding: .utf8) {
-                    if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] {
+                    if let json = try! JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] {
                         
-                        if let usd = json!["usd"] as? String {
-                            completion(usd)
-                            return
+                        let totalCards = json["total_cards"]
+                        
+                        if let cardDictsArray = json["data"] as? [[String : Any]] {
+                            if let card = RDQCard.init(with: cardDictsArray.first!) {
+                                completion("\(card.price)")
+                                return
+                            }
+
                         }
+                        
                     }
                 }
                 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4097DD0DAB84E2165F7DD6B9 /* Pods_MTG_Card_Price.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468FFB87F8919183E71A89CB /* Pods_MTG_Card_Price.framework */; };
+		4A17E9B720377F320076E129 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A17E9B620377F320076E129 /* Card.swift */; };
 		4AF046A32035E7CA0025513F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF046A22035E7CA0025513F /* AppDelegate.swift */; };
 		4AF046A52035E7CA0025513F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF046A42035E7CA0025513F /* ViewController.swift */; };
 		4AF046A72035E7CA0025513F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF046A62035E7CA0025513F /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		3DC98BC6CAAE05E622FE8397 /* Pods-MTG Card Price.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG Card Price.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTG Card Price/Pods-MTG Card Price.debug.xcconfig"; sourceTree = "<group>"; };
 		435337F313C4D12FE3ED2FDA /* Pods-MTG Card PriceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG Card PriceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTG Card PriceTests/Pods-MTG Card PriceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		468FFB87F8919183E71A89CB /* Pods_MTG_Card_Price.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTG_Card_Price.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A17E9B620377F320076E129 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4AF0469F2035E7CA0025513F /* MTG Card Price.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTG Card Price.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF046A22035E7CA0025513F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AF046A42035E7CA0025513F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		4A17E9B120377B990076E129 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A17E9B620377F320076E129 /* Card.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,10 +130,10 @@
 			isa = PBXGroup;
 			children = (
 				4AF046A22035E7CA0025513F /* AppDelegate.swift */,
-				4A17E9B520377BC40076E129 /* Supporting Files */,
 				4A17E9B420377BB30076E129 /* Services\Managers */,
 				4A17E9B120377B990076E129 /* Model */,
 				4A17E9B020377B890076E129 /* Controller */,
+				4A17E9B520377BC40076E129 /* Supporting Files */,
 			);
 			path = "MTG Card Price";
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AF046C12035E8370025513F /* APIManager.swift in Sources */,
+				4A17E9B720377F320076E129 /* Card.swift in Sources */,
 				4AF046A52035E7CA0025513F /* ViewController.swift in Sources */,
 				4AF046A32035E7CA0025513F /* AppDelegate.swift in Sources */,
 			);
