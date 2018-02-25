@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double SwiftSoupVersionNumber;
-FOUNDATION_EXPORT const unsigned char SwiftSoupVersionString[];
+FOUNDATION_EXPORT double SwiftyJSONVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftyJSONVersionString[];
 

@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SwiftyJSON
 
 struct RDQCardImagePath {
     let smallPath : String?
@@ -20,19 +21,19 @@ class RDQCard {
     let price : Double
     let imageURI : RDQCardImagePath
     
-    init?(with dict: [String : Any]) {
-        guard let name = dict["name"] as? String else { return nil }
-        guard let usd = dict["usd"] as? String else { return nil }
-        guard let imageURIs = dict["image_uris"] as? [String : String] else { return nil }
+    init?(with json: JSON) {
+        guard let name = json["name"].string else { return nil }
+        guard let usd = json["usd"].string else { return nil }
+        guard let imageURIs = json["image_uris"].dictionary else { return nil }
         
         self.name = name
         guard let price = Double(usd) else { return nil }
         self.price = price
         
-        self.imageURI = RDQCardImagePath(smallPath: imageURIs["small"],
-                                         mediumPath: imageURIs["normal"],
-                                         largePath: imageURIs["large"],
-                                         artPath: imageURIs["art_crop"])
+        self.imageURI = RDQCardImagePath(smallPath: imageURIs["small"]?.string,
+                                         mediumPath: imageURIs["normal"]?.string,
+                                         largePath: imageURIs["large"]?.string,
+                                         artPath: imageURIs["art_crop"]?.string)
     }
 }
 

@@ -16,6 +16,7 @@
 		4AF046B62035E7CA0025513F /* MTG_Card_PriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF046B52035E7CA0025513F /* MTG_Card_PriceTests.swift */; };
 		4AF046C12035E8370025513F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF046C02035E8370025513F /* APIManager.swift */; };
 		79ACD4CC5F0CFED42FCDCFD1 /* Pods_MTG_Card_PriceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13598053934F1D844562854 /* Pods_MTG_Card_PriceTests.framework */; };
+		84BF08852042A28B008A0622 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF08842042A28B008A0622 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		4AF046B72035E7CA0025513F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AF046C02035E8370025513F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		4AF046C22035EAF20025513F /* MTG Card Price.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MTG Card Price.entitlements"; sourceTree = "<group>"; };
+		84BF08842042A28B008A0622 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		B407E03B896BF5BFC4663183 /* Pods-MTG Card PriceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG Card PriceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTG Card PriceTests/Pods-MTG Card PriceTests.release.xcconfig"; sourceTree = "<group>"; };
 		C13598053934F1D844562854 /* Pods_MTG_Card_PriceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTG_Card_PriceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				4A17E9B420377BB30076E129 /* Services\Managers */,
 				4A17E9B120377B990076E129 /* Model */,
 				4A17E9B020377B890076E129 /* Controller */,
+				84BF08832042A273008A0622 /* Other classes */,
 				4A17E9B520377BC40076E129 /* Supporting Files */,
 			);
 			path = "MTG Card Price";
@@ -156,6 +159,14 @@
 				B407E03B896BF5BFC4663183 /* Pods-MTG Card PriceTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		84BF08832042A273008A0622 /* Other classes */ = {
+			isa = PBXGroup;
+			children = (
+				84BF08842042A28B008A0622 /* Error.swift */,
+			);
+			path = "Other classes";
 			sourceTree = "<group>";
 		};
 		B68DB13E0981C6A161B4EDCD /* Frameworks */ = {
@@ -301,7 +312,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A2F873CB30094508767D4A18 /* [CP] Copy Pods Resources */ = {
@@ -367,7 +378,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -380,6 +391,7 @@
 				4AF046C12035E8370025513F /* APIManager.swift in Sources */,
 				4A17E9B720377F320076E129 /* Card.swift in Sources */,
 				4AF046A52035E7CA0025513F /* ViewController.swift in Sources */,
+				84BF08852042A28B008A0622 /* Error.swift in Sources */,
 				4AF046A32035E7CA0025513F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

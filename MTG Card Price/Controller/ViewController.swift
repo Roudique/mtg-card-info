@@ -30,14 +30,17 @@ class ViewController: NSViewController {
             activityIndicator.isHidden = false
             activityIndicator.startAnimation(nil)
             
-            RDQAPIManager.searchFor(cardWith: searchField.stringValue, completion: { price in
+            RDQAPIManager.searchFor(cardWith: searchField.stringValue, completion: { cards, error  in
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimation(nil)
                     self.activityIndicator.isHidden = true
                     
-                    print("price: \(price)")
-                    if let price = price {
-                        self.priceLabel.stringValue = price
+                    if let _ = error {
+                        self.priceLabel.stringValue = "Error occured."
+                    } else if let firstCard = cards?.first {
+                        self.priceLabel.stringValue = "$\(firstCard.price)"
+                    } else {
+                        self.priceLabel.stringValue = "No cards found."
                     }
                 }
             })
