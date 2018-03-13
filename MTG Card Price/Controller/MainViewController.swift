@@ -8,24 +8,43 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class RDQMainViewController: NSViewController, NSSearchFieldDelegate {
     @IBOutlet weak var searchField: NSSearchField!
     @IBOutlet weak var priceLabel: NSTextField!
     @IBOutlet weak var activityIndicator: NSProgressIndicator!
     
+    
+    
+    var searchResultsController : RDQSearchResultsTableController {
+        for childController in self.childViewControllers {
+            if let controller = childController as? RDQSearchResultsTableController {
+                return controller
+            }
+        }
+        fatalError("Tab controller is missing")
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        searchField.delegate = self
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+    
+    
+    //MARK: - NSSearchFieldDelegate
+    
+    func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+        
+        if commandSelector == #selector(NSResponder.insertNewline(_:)) {
+            performSearch()
         }
+        
+        return false
     }
-
-    @IBAction func searchAction(_ sender: Any) {
+    
+    
+    func performSearch() {
         if searchField.stringValue.count > 0 {
             activityIndicator.isHidden = false
             activityIndicator.startAnimation(nil)
@@ -42,9 +61,17 @@ class ViewController: NSViewController {
                     } else {
                         self.priceLabel.stringValue = "No cards found."
                     }
+                    
+                    guard let cards = cards else { return }
+                    
+                    self.searchResultsController.update(cards: cards)
                 }
             })
         }
+    }
+    
+    @IBAction func searchAction(_ sender: Any) {
+        performSearch()
     }
     
 }

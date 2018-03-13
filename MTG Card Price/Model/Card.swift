@@ -16,10 +16,21 @@ struct RDQCardImagePath {
     let artPath : String?
 }
 
+enum RDQMana {
+    case white
+    case black
+    case green
+    case red
+    case blue
+    case multi
+    case none
+}
+
 class RDQCard {
     let name : String
     let price : Double
     let imageURI : RDQCardImagePath
+    var color : RDQMana
     
     init?(with json: JSON) {
         guard let name = json["name"].string else { return nil }
@@ -34,8 +45,40 @@ class RDQCard {
                                          mediumPath: imageURIs["normal"]?.string,
                                          largePath: imageURIs["large"]?.string,
                                          artPath: imageURIs["art_crop"]?.string)
+        
+        self.color = .none
+        
+        if let colors = json["color_identity"].array {
+            print("Color is array")
+            if let color = colors.first?.stringValue {
+                setup(color: color)
+            }
+        } else if let color = json["color_identity"].string {
+            print("Color is string")
+            setup(color: color)
+        }
+        
+        
+    }
+    
+    func setup(color: String) {
+        switch color.lowercased() {
+        case "w":
+            self.color = .white
+        case "b":
+            self.color = .black
+        case "g":
+            self.color = .green
+        case "r":
+            self.color = .red
+        case "u":
+            self.color = .blue
+        default:
+            self.color = .none
+        }
     }
 }
+
 
 //{
 //    "object": "card",
